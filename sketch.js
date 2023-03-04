@@ -51,6 +51,8 @@ function setup() {
   miTope=new Tope();
   cielo=new BloquesCielo();
   cielo.crearBlock(); //traemos la lista de bloques ante de dibujarlos
+  canvas.elt.setAttribute('touchAction', 'none'); // deshabilita la acción táctil predeterminada del navegador
+}
   
 }
 
@@ -82,8 +84,7 @@ cielo. mostrarBlockesEnPantalla();
   //checamosla coliasion entre pelota y cielo
   coalisionPelotaTopeCielo();
 
-  //usar el touch
-  touchMoved()
+
 
 }
  //movimiento del tope cuando suelta el boton
