@@ -1,0 +1,33 @@
+class Cuadrado {
+  constructor(x, y, lado) {
+    this.x = x;
+    this.y = y;
+    this.lado = lado;
+  }
+
+  moverDerecha(distancia) {
+    this.x += distancia;
+  }
+
+  moverIzquierda(distancia) {
+    this.x -= distancia;
+  }
+
+  moverArriba(distancia) {
+    this.y -= distancia;
+  }
+
+  moverAbajo(distancia) {
+    this.y += distancia;
+  }
+
+  dibujar() {
+    rect(this.x, this.y, this.lado, this.lado);
+  }
+}
+
+
+const miCuadrado = new Cuadrado(100, 100, 50);
+miCuadrado.dibujar();
+miCuadrado.moverDerecha(20);
+miCuadrado.dibujar();
